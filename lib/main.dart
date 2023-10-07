@@ -37,21 +37,19 @@ class MyApp extends StatelessWidget {
                 useMaterial3: true,
                 fontFamily: "LexendDeca",
               ),
-              home: ConstrainedBox(constraints: BoxConstraints(maxHeight: double.infinity),
-                child: ResponsiveBuilder(builder:
-                    (BuildContext context, SizingInformation information) {
-                  switch (information.deviceScreenType) {
-                    case DeviceScreenType.desktop:
-                      return const MainPageBrowser();
-                    case DeviceScreenType.tablet:
-                      return const MainPageTablet();
-                    case DeviceScreenType.mobile:
-                      return const MainPageMobile();
-                    default:
-                      throw Exception("page not found");
-                  }
-                }),
-              ),
+              home: ResponsiveBuilder(builder:
+                  (BuildContext context, SizingInformation information) {
+                switch (information.deviceScreenType) {
+                  case DeviceScreenType.desktop:
+                    return const MainPageBrowser();
+                  case DeviceScreenType.tablet:
+                    return const MainPageTablet();
+                  case DeviceScreenType.mobile:
+                    return const MainPageMobile();
+                  default:
+                    throw Exception("page not found");
+                }
+              }),
               initialRoute: AppRouter.homePage,
               onGenerateRoute: AppRouter.onGeneratedRoute,
             ),);

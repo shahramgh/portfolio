@@ -5,7 +5,6 @@ import 'package:portfolio_website/core/utils/res/app_size.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:portfolio_website/core/utils/res/color.dart';
 import 'package:portfolio_website/core/utils/res/string.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 class SocialMedia extends StatelessWidget {
   const SocialMedia(
@@ -221,7 +220,7 @@ class MyStepper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 20),
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxHeight: double.infinity),
         child: Column(

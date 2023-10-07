@@ -18,221 +18,316 @@ When I hear the buzz of the little world among the stalks, and grow familiar wit
 
   @override
   Widget build(BuildContext context) {
-    return bodyWebPage(context);
-  }
-
-  Widget bodyWebPage(BuildContext context) {
     return ConstrainedBox(
       constraints: BoxConstraints(maxHeight: double.infinity),
-      child: LayoutBuilder(builder: (BuildContext context,BoxConstraints constraints){
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 20.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          vertical: AppSize.height(context) * 0.015,
-                          horizontal: AppSize.width(context) * 0.015),
-                      child: ListTile(
-                        title: Text("Full Name: ",
-                            style: TextStyle(
-                                color: PortfolioText,
-                                fontSize: AppSize.height(context) * 0.025,
-                                fontWeight: FontWeight.w700)),
-                        subtitle: Text(
-                          "Shahram Ghorbani Kalkhajeh",
-                          style: TextStyle(
-                              color: PortfolioTextLightGray,
-                              fontSize: AppSize.height(context) * 0.015,
-                              fontWeight: FontWeight.w700),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          vertical: AppSize.height(context) * 0.015,
-                          horizontal: AppSize.width(context) * 0.015),
-                      child: ListTile(
-                        title: Text("Birthday ",
-                            style: TextStyle(
-                                color: PortfolioText,
-                                fontSize: AppSize.height(context) * 0.025,
-                                fontWeight: FontWeight.w700)),
-                        subtitle: Text(
-                          "28 August 1988",
-                          style: TextStyle(
-                              color: PortfolioTextLightGray,
-                              fontSize: AppSize.height(context) * 0.015,
-                              fontWeight: FontWeight.w700),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          vertical: AppSize.height(context) * 0.015,
-                          horizontal: AppSize.width(context) * 0.015),
-                      child: ListTile(
-                        title: Text("Job ",
-                            style: TextStyle(
-                                color: PortfolioText,
-                                fontSize: AppSize.height(context) * 0.025,
-                                fontWeight: FontWeight.w700)),
-                        subtitle: Text(
-                          "Freelancer",
-                          style: TextStyle(
-                              color: PortfolioTextLightGray,
-                              fontSize: AppSize.height(context) * 0.015,
-                              fontWeight: FontWeight.w700),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          vertical: AppSize.height(context) * 0.015,
-                          horizontal: AppSize.width(context) * 0.015),
-                      child: ListTile(
-                        title: Text("Website",
-                            style: TextStyle(
-                                color: PortfolioText,
-                                fontSize: AppSize.height(context) * 0.025,
-                                fontWeight: FontWeight.w700)),
-                        subtitle: Text(
-                          "https://www.shahram-ghorbani.com",
-                          style: TextStyle(
-                              color: PortfolioTextLightGray,
-                              fontSize: AppSize.height(context) * 0.015,
-                              fontWeight: FontWeight.w700),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          vertical: AppSize.height(context) * 0.015,
-                          horizontal: AppSize.width(context) * 0.015),
-                      child: ListTile(
-                        title: Text(
-                          "Email ",
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 20.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                        vertical: AppSize.height(context) * 0.015,
+                        horizontal: AppSize.width(context) * 0.015),
+                    child: ListTile(
+                      title: Text("Full Name: ",
                           style: TextStyle(
                               color: PortfolioText,
                               fontSize: AppSize.height(context) * 0.025,
-                              fontWeight: FontWeight.w700),
-                        ),
-                        subtitle: Text(
-                          "shahram.ghorbani.kalkhajeh@gmail.com",
-                          style: TextStyle(
-                              color: PortfolioTextLightGray,
-                              fontSize: AppSize.height(context) * 0.018,
-                              fontWeight: FontWeight.w700),
-                        ),
+                              fontWeight: FontWeight.w700)),
+                      subtitle: Text(
+                        "Shahram Ghorbani Kalkhajeh",
+                        style: TextStyle(
+                            color: PortfolioTextLightGray,
+                            fontSize: AppSize.height(context) * 0.015,
+                            fontWeight: FontWeight.w700),
                       ),
                     ),
                   ),
-                  const Expanded(
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                        vertical: AppSize.height(context) * 0.015,
+                        horizontal: AppSize.width(context) * 0.015),
+                    child: ListTile(
+                      title: Text("Birthday ",
+                          style: TextStyle(
+                              color: PortfolioText,
+                              fontSize: AppSize.height(context) * 0.025,
+                              fontWeight: FontWeight.w700)),
+                      subtitle: Text(
+                        "28 August 1988",
+                        style: TextStyle(
+                            color: PortfolioTextLightGray,
+                            fontSize: AppSize.height(context) * 0.015,
+                            fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                        vertical: AppSize.height(context) * 0.015,
+                        horizontal: AppSize.width(context) * 0.015),
+                    child: ListTile(
+                      title: Text("Job ",
+                          style: TextStyle(
+                              color: PortfolioText,
+                              fontSize: AppSize.height(context) * 0.025,
+                              fontWeight: FontWeight.w700)),
+                      subtitle: Text(
+                        "Freelancer",
+                        style: TextStyle(
+                            color: PortfolioTextLightGray,
+                            fontSize: AppSize.height(context) * 0.015,
+                            fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                        vertical: AppSize.height(context) * 0.015,
+                        horizontal: AppSize.width(context) * 0.015),
+                    child: ListTile(
+                      title: Text("Website",
+                          style: TextStyle(
+                              color: PortfolioText,
+                              fontSize: AppSize.height(context) * 0.025,
+                              fontWeight: FontWeight.w700)),
+                      subtitle: Text(
+                        "https://www.shahram-ghorbani.com",
+                        style: TextStyle(
+                            color: PortfolioTextLightGray,
+                            fontSize: AppSize.height(context) * 0.015,
+                            fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                        vertical: AppSize.height(context) * 0.015,
+                        horizontal: AppSize.width(context) * 0.015),
+                    child: ListTile(
+                      title: Text(
+                        "Email ",
+                        style: TextStyle(
+                            color: PortfolioText,
+                            fontSize: AppSize.height(context) * 0.025,
+                            fontWeight: FontWeight.w700),
+                      ),
+                      subtitle: Text(
+                        "shahram.ghorbani.kalkhajeh@gmail.com",
+                        style: TextStyle(
+                            color: PortfolioTextLightGray,
+                            fontSize: AppSize.height(context) * 0.018,
+                            fontWeight: FontWeight.w700),
+                      ),
+                    ),
+                  ),
+                ),
+                const Expanded(
+                  flex: 1,
+                  child: Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: SizedBox(),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: ListTile(
+                title: Text("I'm Developer",
+                    style: TextStyle(
+                        color: PortfolioText,
+                        fontSize: AppSize.height(context) * 0.025,
+                        fontWeight: FontWeight.bold)),
+                subtitle: Text.rich(
+                    TextSpan(
+                      spellOut: true,
+                      style: TextStyle(
+                          fontSize: AppSize.height(context) * 0.015,
+                          inherit: true,
+                          overflow: TextOverflow.clip,
+                          color: PortfolioTextLightGray),
+                      children: const [],
+                      text: _text,
+                    ),
+                    textAlign: TextAlign.justify,
+                    softWrap: true,
+                    textDirection: TextDirection.ltr),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(bottom: AppSize.height(context)*0.1),
+              child: Row(
+                children: [
+                  Expanded(
                     flex: 1,
-                    child: Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: SizedBox(),
+                    child: const Column(
+                      children: [
+                        SkillPercentIndicatorItem(
+                          title: "Flutter",
+                          percent: 0.90,
+                          width: 0.3,
+                        ),
+                        SkillPercentIndicatorItem(
+                          title: "Dart",
+                          percent: 0.80,
+                          width: 0.3,
+                        ),
+                        SkillPercentIndicatorItem(
+                          title: "Java",
+                          percent: 0.50,
+                          width: 0.3,
+                        ),
+                        SkillPercentIndicatorItem(
+                          title: "Android",
+                          percent: 0.70,
+                          width: 0.3,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: const Column(
+                      children: [
+                        SkillPercentIndicatorItem(
+                          title: "MongoDB",
+                          percent: 0.50,
+                          width: 0.3,
+                        ),
+                        SkillPercentIndicatorItem(
+                          title: "Python",
+                          percent: 0.50,
+                          width: 0.3,
+                        ),
+                        SkillPercentIndicatorItem(
+                          title: "Photoshop",
+                          percent: 0.50,
+                          width: 0.3,
+                        ),
+                        SkillPercentIndicatorItem(
+                          title: "Illustrator",
+                          percent: 0.50,
+                          width: 0.3,
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                child: ListTile(
-                  title: Text("I'm Developer",
-                      style: TextStyle(
-                          color: PortfolioText,
-                          fontSize: AppSize.height(context) * 0.025,
-                          fontWeight: FontWeight.bold)),
-                  subtitle: Text.rich(
-                      TextSpan(
-                        spellOut: true,
-                        style: TextStyle(
-                            fontSize: AppSize.height(context) * 0.015,
-                            inherit: true,
-                            overflow: TextOverflow.clip,
-                            color: PortfolioTextLightGray),
-                        children: const [],
-                        text: _text,
+            ),
+            Container(
+              color: appleWhite,
+              width: AppSize.width(context),
+              height: AppSize.height(context)*0.2,
+              child: Column(
+                crossAxisAlignment:
+                CrossAxisAlignment.center,
+                mainAxisAlignment:
+                MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment:
+                    MainAxisAlignment.center,
+                    children: [
+                      SocialMedia(
+                        size: 7.screenWidth,
+                        imageAddress:
+                        "assets/images/social_media/githubTwo.png",
+                        onTap: () {},
                       ),
-                      textAlign: TextAlign.justify,
-                      softWrap: true,
-                      textDirection: TextDirection.ltr),
-                ),
+
+                      SocialMedia(
+                        size: 7.screenHeight,
+                        onTap: () {},
+                        imageAddress:
+                        "assets/images/social_media/youtube.png",
+                      ),
+                      SocialMedia(
+                        size: 7.screenWidth,
+                        imageAddress:
+                        "assets/images/social_media/linkedin.png",
+                        onTap: () {},
+                      ),
+                      SocialMedia(
+                        size: 7.screenWidth,
+                        onTap: () {},
+                        imageAddress:
+                        "assets/images/social_media/twitter.png",
+                      ),
+                      SocialMedia(
+                        size: 7.screenWidth,
+                        onTap: () {},
+                        imageAddress:
+                        "assets/images/social_media/instagram.png",
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment:
+                    MainAxisAlignment.center,
+                    children: [
+                      SocialMedia(
+                        size: 7.screenWidth,
+                        imageAddress:
+                        "assets/images/social_media/githubTwo.png",
+                        onTap: () {},
+                      ),
+                      SocialMedia(
+                        size: 7.screenWidth,
+                        imageAddress:
+                        "assets/images/social_media/stack_overflow.png",
+                        onTap: () {},
+                      ),
+                      SocialMedia(
+                        size: 7.screenWidth,
+                        onTap: () {},
+                        imageAddress:
+                        "assets/images/social_media/youtube.png",
+                      ),
+                      SocialMedia(
+                        size: 7.screenWidth,
+                        imageAddress:
+                        "assets/images/social_media/linkedin.png",
+                        onTap: () {},
+                      ),
+                      SocialMedia(
+                        size: 7.screenWidth,
+                        onTap: () {},
+                        imageAddress:
+                        "assets/images/social_media/instagram.png",
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              Padding(
-                padding: EdgeInsets.only(bottom: AppSize.height(context)*0.1),
-                child: const Column(
-                  children: [
-                    SkillPercentIndicatorItem(
-                      title: "Flutter",
-                      percent: 0.90,
-                      width: 0.6,
-                    ),
-                    SkillPercentIndicatorItem(
-                      title: "Dart",
-                      percent: 0.80,
-                      width: 0.6,
-                    ),
-                    SkillPercentIndicatorItem(
-                      title: "Java",
-                      percent: 0.60,
-                      width: 0.6,
-                    ),
-                    SkillPercentIndicatorItem(
-                      title: "Android",
-                      percent: 0.70,
-                      width: 0.6,
-                    ),
-                    SkillPercentIndicatorItem(
-                      title: "MongoDB",
-                      percent: 0.50,
-                      width: 0.6,
-                    ),
-                    SkillPercentIndicatorItem(
-                      title: "Python",
-                      percent: 0.50,
-                      width: 0.6,
-                    ),
-                    SkillPercentIndicatorItem(
-                      title: "Photoshop",
-                      percent: 0.50,
-                      width: 0.6,
-                    ),
-                    SkillPercentIndicatorItem(
-                      title: "Illustrator",
-                      percent: 0.50,
-                      width: 0.6,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        );
-      }),
+            ),
+          ],
+        ),
+      ),
     );
   }
+
 }

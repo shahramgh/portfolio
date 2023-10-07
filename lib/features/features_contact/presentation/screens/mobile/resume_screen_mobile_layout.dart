@@ -16,9 +16,9 @@ class ResumeScreenMobileLayout extends StatelessWidget {
 
   Widget bodyWebPage(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints(maxHeight: AppSize.height(context).screenHeight),
+      constraints: BoxConstraints(maxHeight: double.infinity.screenHeight),
       child: ListView(
-        children: [
+        children: const [
           MyStepper(icon: CupertinoIcons.airplane, list: [
             MyStepperItem(
               icon: CupertinoIcons.circle_filled,

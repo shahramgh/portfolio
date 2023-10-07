@@ -60,14 +60,9 @@ class TabletBodyLeftSide extends StatelessWidget {
                         "assets/images/social_media/githubTwo.png",
                         onTap: () {},
                       ),
+
                       SocialMedia(
-                        size: 5.screenWidth,
-                        imageAddress:
-                        "assets/images/social_media/stack_overflow.png",
-                        onTap: () {},
-                      ),
-                      SocialMedia(
-                        size: 5.screenWidth,
+                        size: 5.screenHeight,
                         onTap: () {},
                         imageAddress:
                         "assets/images/social_media/youtube.png",
@@ -124,13 +119,43 @@ class TabletBodyLeftSide extends StatelessWidget {
                         size: 5.screenWidth,
                         onTap: () {},
                         imageAddress:
-                        "assets/images/social_media/twitter.png",
+                        "assets/images/social_media/instagram.png",
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment:
+                    MainAxisAlignment.center,
+                    children: [
+                      SocialMedia(
+                        size: 5.screenWidth,
+                        imageAddress:
+                        "assets/images/social_media/githubTwo.png",
+                        onTap: () {},
+                      ),
+                      SocialMedia(
+                        size: 5.screenWidth,
+                        imageAddress:
+                        "assets/images/social_media/stack_overflow.png",
+                        onTap: () {},
                       ),
                       SocialMedia(
                         size: 5.screenWidth,
                         onTap: () {},
                         imageAddress:
-                        "assets/images/social_media/instagram.png",
+                        "assets/images/social_media/youtube.png",
+                      ),
+                      SocialMedia(
+                        size: 5.screenWidth,
+                        imageAddress:
+                        "assets/images/social_media/linkedin.png",
+                        onTap: () {},
+                      ),
+                      SocialMedia(
+                        size: 5.screenWidth,
+                        onTap: () {},
+                        imageAddress:
+                        "assets/images/social_media/twitter.png",
                       ),
                     ],
                   ),

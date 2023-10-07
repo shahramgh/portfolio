@@ -40,19 +40,20 @@ class ContactScreenTabletLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return bodyWebPage(context);
-  }
-
-  Widget bodyWebPage(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints(maxHeight: double.infinity),
+      constraints: const BoxConstraints(maxHeight: double.infinity),
       child: Column(
         children: [
           Container(
-            color: appleWhite,
             width: AppSize.width(context),
             height: AppSize.height(context) * 0.7,
-            // flex: 2,
+            decoration: BoxDecoration(
+              border: Border.all(width: 5, color: kPrimaryLabelColor),
+              color: appleWhite,
+              borderRadius: const BorderRadius.all(
+                Radius.circular(20),
+              ),
+            ),
             child: Padding(
               padding: EdgeInsets.symmetric(
                   horizontal: AppSize.width(context) * 0.05,
@@ -98,12 +99,14 @@ class ContactScreenTabletLayout extends StatelessWidget {
                             controller: nameField,
                             decoration: const InputDecoration(
                               enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Dark_Gray, width: 3.0),
+                                    BorderSide(color: Dark_Gray, width: 1.5),
                               ),
                               focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Iron_Gray, width: 3.0),
+                                    BorderSide(color: Iron_Gray, width: 105),
                               ),
                               hintText: "name",
                             ),
@@ -115,12 +118,14 @@ class ContactScreenTabletLayout extends StatelessWidget {
                             controller: subjectField,
                             decoration: const InputDecoration(
                               enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Dark_Gray, width: 3.0),
+                                    BorderSide(color: Dark_Gray, width: 1.5),
                               ),
                               focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Iron_Gray, width: 3.0),
+                                    BorderSide(color: Iron_Gray, width: 1.5),
                               ),
                               hintText: "subject",
                             ),
@@ -132,12 +137,14 @@ class ContactScreenTabletLayout extends StatelessWidget {
                             controller: emailField,
                             decoration: const InputDecoration(
                               enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Dark_Gray, width: 3.0),
+                                    BorderSide(color: Dark_Gray, width: 1.5),
                               ),
                               focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Iron_Gray, width: 3.0),
+                                    BorderSide(color: Iron_Gray, width: 1.5),
                               ),
                               hintText: "email",
                             ),
@@ -150,19 +157,22 @@ class ContactScreenTabletLayout extends StatelessWidget {
                             maxLines: 10,
                             decoration: const InputDecoration(
                               enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Dark_Gray, width: 3.0),
+                                    BorderSide(color: Dark_Gray, width: 1.5),
                               ),
                               focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Iron_Gray, width: 3.0),
+                                    BorderSide(color: Iron_Gray, width: 1.5),
                               ),
                               hintText: "message",
                             ),
                           ),
                         ),
                         Container(
-                          padding: EdgeInsets.symmetric(horizontal: AppSize.width(context)*0.1),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: AppSize.width(context) * 0.1),
                           width: AppSize.width(context),
                           child: ElevatedButton(
                             clipBehavior: Clip.antiAlias,
@@ -222,7 +232,7 @@ class ContactScreenTabletLayout extends StatelessWidget {
                                 ),
                                 TextSpan(
                                   text:
-                                  "\t72.NO,Modarres Boulevard,Isfahan Province, Shahin Shahr",
+                                      "\t72.NO,Modarres Boulevard,Isfahan Province, Shahin Shahr",
                                   style: TextStyle(
                                       color: Iron_Gray,
                                       fontWeight: FontWeight.w500,
@@ -246,7 +256,7 @@ class ContactScreenTabletLayout extends StatelessWidget {
                                 ),
                                 TextSpan(
                                   text:
-                                  "\t+989132064434\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t+989351057876",
+                                      "\t+989132064434\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t+989351057876",
                                   style: TextStyle(
                                       color: Iron_Gray,
                                       fontWeight: FontWeight.w500,
@@ -316,7 +326,7 @@ class ContactScreenTabletLayout extends StatelessWidget {
                                 ),
                                 TextSpan(
                                   text:
-                                  "\t+989132064434\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t+989351057876",
+                                      "\t+989132064434\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t+989351057876",
                                   style: TextStyle(
                                       color: Iron_Gray,
                                       fontWeight: FontWeight.w500,

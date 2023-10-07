@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_website/core/params/enum_appbar.dart';
+import 'package:portfolio_website/core/utils/component/bottom_mobile_layout.dart';
 import 'package:portfolio_website/core/utils/res/app_size.dart';
 import 'package:portfolio_website/core/utils/res/color.dart';
 import 'package:portfolio_website/core/utils/res/string.dart';
 import 'package:portfolio_website/features/features_contact/presentation/screens/mobile/about_screen_mobile_layout.dart';
 import 'package:portfolio_website/features/features_contact/presentation/screens/mobile/contact_screen_mobile_layout.dart';
 import 'package:portfolio_website/features/features_contact/presentation/screens/mobile/resume_screen_mobile_layout.dart';
-import 'package:responsive_builder/responsive_builder.dart';
 
 class MainPageMobile extends StatefulWidget {
   const MainPageMobile({super.key});
@@ -17,7 +17,8 @@ class MainPageMobile extends StatefulWidget {
 }
 
 class _MainPageMobileState extends State<MainPageMobile> {
-  WidgetMarker _selectedWidgetMarker = WidgetMarker.about;
+  WidgetMarker _selectedWidgetMarker = WidgetMarker.contact;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,43 +26,51 @@ class _MainPageMobileState extends State<MainPageMobile> {
       extendBodyBehindAppBar: true,
       backgroundColor: appleWhite,
       drawer: Drawer(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              DrawerHeader(
-                padding: EdgeInsets.only(top: 50),
-                decoration: const BoxDecoration(),
-                child: Text(
-                  StringApp.webTitle,
-                  style: const TextStyle(fontFamily: "GreatVibes"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Container(
+              width: AppSize.width(context),
+              height: AppSize.height(context) * 0.4,
+              alignment: Alignment.center,
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(15),
                 ),
+                child: Image.asset("assets/images/avatar/image2.jpg",
+                    fit: BoxFit.contain),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextButton(
-                  onPressed: () {
-                    setState(() {
-                      _selectedWidgetMarker = WidgetMarker.about;
-                    });
-                    Navigator.pop(context);
-                  },
-                  child: const Text("ABOUT",style: const TextStyle(color: Dark_Gray)),
-                ),
+            ),
+            Text(
+              StringApp.webTitle,
+              style: const TextStyle(fontFamily: "GreatVibes"),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextButton(
+                onPressed: () {
+                  setState(() {
+                    _selectedWidgetMarker = WidgetMarker.about;
+                  });
+                  Navigator.pop(context);
+                },
+                child: const Text("ABOUT", style: TextStyle(color: Dark_Gray)),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextButton(
-                  onPressed: () {
-                    setState(() {
-                      _selectedWidgetMarker = WidgetMarker.resume;
-                    });
-                    Navigator.pop(context);
-                  },
-                  child: const Text("RESUME",style: const TextStyle(color: Dark_Gray)),
-                ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextButton(
+                onPressed: () {
+                  setState(() {
+                    _selectedWidgetMarker = WidgetMarker.resume;
+                  });
+                  Navigator.pop(context);
+                },
+                child: const Text("RESUME", style: TextStyle(color: Dark_Gray)),
               ),
-              /*Padding(
+            ),
+            AbsorbPointer(
+              child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextButton(
                   onPressed: () {
@@ -70,10 +79,13 @@ class _MainPageMobileState extends State<MainPageMobile> {
                     });
                     Navigator.pop(context);
                   },
-                  child: const Text("PORTFOLIO",style: const TextStyle(color: Dark_Gray)),
+                  child: const Text("PORTFOLIO",
+                      style: TextStyle(color: Dark_Gray,decoration: TextDecoration.lineThrough,)),
                 ),
               ),
-              Padding(
+            ),
+            AbsorbPointer(
+              child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextButton(
                   onPressed: () {
@@ -82,23 +94,27 @@ class _MainPageMobileState extends State<MainPageMobile> {
                     });
                     Navigator.pop(context);
                   },
-                  child: const Text("BLOG",style: const TextStyle(color: Dark_Gray)),
-                ),
-              ),*/
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextButton(
-                  onPressed: () {
-                    setState(() {
-                      _selectedWidgetMarker = WidgetMarker.contact;
-                    });
-                    Navigator.pop(context);
-                  },
-                  child: const Text("CONTACT",style: const TextStyle(color: Dark_Gray)),
+                  child: const Text("BLOG", style: TextStyle(decoration: TextDecoration.lineThrough,color: Dark_Gray)),
                 ),
               ),
-            ],
-          ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextButton(
+                onPressed: () {
+                  setState(() {
+                    _selectedWidgetMarker = WidgetMarker.about;
+                  });
+                  Navigator.pop(context);
+                },
+                child: const Text(
+                  "CONTACT",
+                  style: TextStyle(color: Dark_Gray),
+                ),
+              ),
+            ),
+            BottomMobileLayout(context: context)
+          ],
         ),
       ),
       appBar: AppBar(
@@ -107,28 +123,9 @@ class _MainPageMobileState extends State<MainPageMobile> {
       ),
       body: NestedScrollView(
         scrollDirection: Axis.vertical,
-        body: ConstrainedBox(
-          constraints: BoxConstraints(maxHeight: double.infinity.screenHeight),
-          child: Column(
-            /*mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,*/
-            children: <Widget>[
-              Expanded(
-                flex: 7,
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 15.0, top: 20,left: 15),
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints(maxHeight: double.infinity),
-                    child: Placeholder(color: appleWhite,
-                        fallbackWidth: AppSize.width(context),
-                        fallbackHeight: double.infinity,child: _getCustomContainer()),
-                  ),
-                ),
-              ),
-              bottomWebPage(context),
-            ],
-          ),
-        ), headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) =>[],
+        body: _selectedWidgetMarker==WidgetMarker.contact?SingleChildScrollView(child: _getCustomContainer()):_getCustomContainer(),
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) =>
+            [],
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
@@ -139,7 +136,7 @@ class _MainPageMobileState extends State<MainPageMobile> {
         return const AboutScreenMobileLayout();
       case WidgetMarker.resume:
         return ResumeScreenMobileLayout();
-/*      case WidgetMarker.portfolio:
+      case WidgetMarker.portfolio:
         return Container(
           width: AppSize.width(context),
           height: AppSize.height(context),
@@ -150,7 +147,7 @@ class _MainPageMobileState extends State<MainPageMobile> {
           width: AppSize.width(context),
           height: AppSize.height(context),
           color: Colors.deepOrange,
-        );*/
+        );
       case WidgetMarker.contact:
         return ContactScreenMobileLayout();
       default:
@@ -162,8 +159,7 @@ class _MainPageMobileState extends State<MainPageMobile> {
     return Container(
       width: AppSize.width(context),
       height: AppSize.height(context) * 0.1,
-      color: appleWhite,
-      child:  Expanded(
+      child: Expanded(
         flex: 2,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -183,7 +179,9 @@ class _MainPageMobileState extends State<MainPageMobile> {
                     StringApp.appCopyRightFull,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
-                        fontFamily: "Gruppo", inherit: true,),
+                      fontFamily: "Gruppo",
+                      inherit: true,
+                    ),
                   ),
                 ),
               ),
@@ -198,5 +196,3 @@ class _MainPageMobileState extends State<MainPageMobile> {
     );
   }
 }
-
-

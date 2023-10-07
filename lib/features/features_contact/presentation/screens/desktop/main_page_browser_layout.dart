@@ -27,6 +27,7 @@ class _MainPageBrowserState extends State<MainPageBrowser> {
         scrolledUnderElevation: 0,
         leadingWidth: AppSize.width(context),
         leading: Row(children: [
+          SizedBox(width: 50),
           TextButton(
             onPressed: () {
               setState(() {
@@ -53,30 +54,41 @@ class _MainPageBrowserState extends State<MainPageBrowser> {
                   color: Dark_Gray, fontWeight: FontWeight.w700, fontSize: 16),
             ),
           ),
-/*          TextButton(
-            onPressed: () {
-              setState(() {
-                _selectedWidgetMarker = WidgetMarker.portfolio;
-              });
-            },
-            child: const Text(
-              "PORTFOLIO",
-              style: TextStyle(
-                  color: Dark_Gray, fontWeight: FontWeight.w700, fontSize: 16),
+          AbsorbPointer(
+            child: TextButton(
+              onPressed: () {
+                setState(() {
+                  _selectedWidgetMarker = WidgetMarker.portfolio;
+                });
+              },
+              child: const Text(
+                softWrap: true,
+                "PORTFOLIO",
+                style: TextStyle(
+                    decoration: TextDecoration.lineThrough,
+                    color: Dark_Gray,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16),
+              ),
             ),
           ),
-          TextButton(
-            onPressed: () {
-              setState(() {
-                _selectedWidgetMarker = WidgetMarker.blog;
-              });
-            },
-            child: const Text(
-              "BLOG",
-              style: TextStyle(
-                  color: Dark_Gray, fontWeight: FontWeight.w700, fontSize: 16),
+          AbsorbPointer(
+            child: TextButton(
+              onPressed: () {
+                setState(() {
+                  _selectedWidgetMarker = WidgetMarker.blog;
+                });
+              },
+              child: const Text(
+                "BLOG",
+                style: TextStyle(
+                    decoration: TextDecoration.lineThrough,
+                    color: Dark_Gray,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16),
+              ),
             ),
-          ),*/
+          ),
           TextButton(
             onPressed: () {
               setState(() {
@@ -105,7 +117,7 @@ class _MainPageBrowserState extends State<MainPageBrowser> {
                 // shrinkWrap: true,
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  bodyWidget(context),
+                  _getCustomContainer(),
                   BottomWebLayout(context: context),
                   // bodyWebPage(context),
                 ],
@@ -114,18 +126,6 @@ class _MainPageBrowserState extends State<MainPageBrowser> {
           ),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-
-  Widget bodyWidget(BuildContext context) {
-    return ConstrainedBox(
-      constraints: BoxConstraints(
-        maxHeight: double.infinity,
-      ),
-      child: Padding(
-        padding: const EdgeInsets.only(right: 15.0, top: 20, left: 20),
-        child: _getCustomContainer(),
-      ),
     );
   }
 

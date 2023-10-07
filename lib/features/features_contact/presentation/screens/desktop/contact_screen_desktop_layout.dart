@@ -100,12 +100,14 @@ class ContactScreenWebLayout extends StatelessWidget {
                             controller: nameField,
                             decoration: const InputDecoration(
                               enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Dark_Gray, width: 3.0),
+                                BorderSide(color: Dark_Gray, width: 1.5),
                               ),
                               focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Iron_Gray, width: 3.0),
+                                BorderSide(color: Iron_Gray, width: 1.5),
                               ),
                               hintText: "name",
                             ),
@@ -117,12 +119,14 @@ class ContactScreenWebLayout extends StatelessWidget {
                             controller: subjectField,
                             decoration: const InputDecoration(
                               enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Dark_Gray, width: 3.0),
+                                BorderSide(color: Dark_Gray, width: 1.5),
                               ),
                               focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Iron_Gray, width: 3.0),
+                                BorderSide(color: Iron_Gray, width: 1.5),
                               ),
                               hintText: "subject",
                             ),
@@ -134,12 +138,14 @@ class ContactScreenWebLayout extends StatelessWidget {
                             controller: emailField,
                             decoration: const InputDecoration(
                               enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Dark_Gray, width: 3.0),
+                                BorderSide(color: Dark_Gray, width: 1.5),
                               ),
                               focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Iron_Gray, width: 3.0),
+                                BorderSide(color: Iron_Gray, width: 1.5),
                               ),
                               hintText: "email",
                             ),
@@ -152,12 +158,14 @@ class ContactScreenWebLayout extends StatelessWidget {
                             maxLines: 10,
                             decoration: const InputDecoration(
                               enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Dark_Gray, width: 3.0),
+                                BorderSide(color: Dark_Gray, width: 1.5),
                               ),
                               focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                                 borderSide:
-                                BorderSide(color: Iron_Gray, width: 3.0),
+                                BorderSide(color: Iron_Gray, width: 1.5),
                               ),
                               hintText: "message",
                             ),

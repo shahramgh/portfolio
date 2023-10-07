@@ -15,8 +15,7 @@ class BottomTabletLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: AppSize.width(context),
-      height: AppSize.height(context) * 0.2,
-      color: appleWhite,
+      color: Transparent,
       child: Expanded(
         flex: 2,
         child: Row(
@@ -34,8 +33,8 @@ class BottomTabletLayout extends StatelessWidget {
                       vertical: AppSize.height(context) * 0.007,
                       horizontal: AppSize.width(context) * 0.015),
                   child: Text(
-                    textAlign: TextAlign.center,
                     StringApp.appCopyRightFull,
+                    textAlign: TextAlign.center,
                     style: const TextStyle(
                         fontFamily: "Gruppo", inherit: true),
                   ),

@@ -15,10 +15,10 @@ class WebBodyLeftSide extends StatelessWidget {
     return SizedBox(
       height: AppSize.height(context),
       width: AppSize.width(context)*0.3,
+      // flex: 3,
       child: Padding(
         padding: const EdgeInsets.only(left: 10, top: 20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Expanded(
               flex: 6,

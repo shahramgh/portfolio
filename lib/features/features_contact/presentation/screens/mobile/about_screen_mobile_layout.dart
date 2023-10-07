@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website/core/utils/res/app_size.dart';
 import 'package:portfolio_website/core/utils/res/color.dart';
 import 'package:portfolio_website/core/widgets/common_widget.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class AboutScreenMobileLayout extends StatelessWidget {
   const AboutScreenMobileLayout({
@@ -18,8 +19,8 @@ When I hear the buzz of the little world among the stalks, and grow familiar wit
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: AppSize.width(context),
-      height: AppSize.height(context),
+      width: double.infinity.screenWidth,
+      height: double.infinity.screenHeight,
       color: appleWhite,
       child: ListView(
         children: [

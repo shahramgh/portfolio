@@ -41,13 +41,9 @@ class ContactScreenMobileLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return bodyWebPage(context);
-  }
-
-  Widget bodyWebPage(BuildContext context) {
     return ConstrainedBox(
       constraints: BoxConstraints(maxHeight: double.infinity),
-      child: ListView(
+      child: Column(
         children: [
           Container(
             color: appleWhite,
@@ -75,172 +71,271 @@ class ContactScreenMobileLayout extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: AbsorbPointer(
-              absorbing: true,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text("Contact Form"),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      controller: nameField,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Dark_Gray, width: 3.0),
+          SizedBox(
+            width: AppSize.width(context),
+            height: AppSize.height(context) * 0.9,
+            // flex: 1,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: AbsorbPointer(
+                    absorbing: true,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Text("Contact Form"),
                         ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Iron_Gray, width: 3.0),
-                        ),
-                        hintText: "name",
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      controller: subjectField,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Dark_Gray, width: 3.0),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Iron_Gray, width: 3.0),
-                        ),
-                        hintText: "subject",
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      controller: emailField,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Dark_Gray, width: 3.0),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Iron_Gray, width: 3.0),
-                        ),
-                        hintText: "email",
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextFormField(
-                      controller: messageField,
-                      maxLines: 10,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Dark_Gray, width: 3.0),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Iron_Gray, width: 3.0),
-                        ),
-                        hintText: "message",
-                      ),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 50),
-                    width: AppSize.width(context),
-                    child: ElevatedButton(
-                      clipBehavior: Clip.antiAlias,
-                      onPressed: () {
-                        const service_id = 'service_7bsaekv';
-                        const template_id = 'template_n3eu7cs';
-                        const user_id = 'user_hswMLSLvzBJE6mzii';
-                        final url = Uri.parse(
-                            'https://api.emailjs.com/api/v1.0/email/send');
-                        http.post(
-                          url,
-                          headers: {'Content-Type': 'application/json'},
-                          body: jsonEncode(
-                            {
-                              'service_id': service_id,
-                              'template_id': template_id,
-                              'user_id': user_id,
-                              'template_params': {
-                                'user_name': nameField.text,
-                                'user_email': emailField.text,
-                                'user_subject': subjectField.text,
-                                'user_message': messageField.text
-                              }
-                            },
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: TextFormField(
+                            controller: nameField,
+                            decoration: const InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                borderSide:
+                                BorderSide(color: Dark_Gray, width: 1.5),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                borderSide:
+                                BorderSide(color: Iron_Gray, width: 1.5),
+                              ),
+                              hintText: "name",
+                            ),
                           ),
-                        );
-                      },
-                      child: const Text("Send"),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: TextFormField(
+                            controller: subjectField,
+                            decoration: const InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                borderSide:
+                                BorderSide(color: Dark_Gray, width: 1.5),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                borderSide:
+                                BorderSide(color: Iron_Gray, width: 1.5),
+                              ),
+                              hintText: "subject",
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: TextFormField(
+                            controller: emailField,
+                            decoration: const InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                borderSide:
+                                BorderSide(color: Dark_Gray, width: 1.5),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                borderSide:
+                                BorderSide(color: Iron_Gray, width: 1.5),
+                              ),
+                              hintText: "email",
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: TextFormField(
+                            controller: messageField,
+                            maxLines: 10,
+                            decoration: const InputDecoration(
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                borderSide:
+                                BorderSide(color: Dark_Gray, width: 1.5),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                borderSide:
+                                BorderSide(color: Iron_Gray, width: 1.5),
+                              ),
+                              hintText: "message",
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: AppSize.width(context)*0.1),
+                          width: AppSize.width(context),
+                          child: ElevatedButton(
+                            clipBehavior: Clip.antiAlias,
+                            onPressed: () {
+                              const service_id = 'service_7bsaekv';
+                              const template_id = 'template_n3eu7cs';
+                              const user_id = 'user_hswMLSLvzBJE6mzii';
+                              final url = Uri.parse(
+                                  'https://api.emailjs.com/api/v1.0/email/send');
+                              http.post(
+                                url,
+                                headers: {'Content-Type': 'application/json'},
+                                body: jsonEncode(
+                                  {
+                                    'service_id': service_id,
+                                    'template_id': template_id,
+                                    'user_id': user_id,
+                                    'template_params': {
+                                      'user_name': nameField.text,
+                                      'user_email': emailField.text,
+                                      'user_subject': subjectField.text,
+                                      'user_message': messageField.text
+                                    }
+                                  },
+                                ),
+                              );
+                            },
+                            child: const Text("Send"),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                ],
-              ),
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(15),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(bottom: 10.0),
-                    child: Text("Contact Info"),
-                  ),
-                  ListTile(
-                    titleAlignment: ListTileTitleAlignment.top,
-                    leading: Icon(CupertinoIcons.location_solid),
-                    title: Text(
-                      "\t72.NO,Modarres Boulevard,Isfahan Province, Shahin Shahr",
-                      style: TextStyle(
-                          color: Iron_Gray,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(bottom: 10.0),
+                          child: Text("Contact Info"),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: RichText(
+                            text: const TextSpan(
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: "Address :",
+                                  style: TextStyle(
+                                      color: Dark_Gray,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 18),
+                                ),
+                                TextSpan(
+                                  text:
+                                  "\t72.NO,Modarres Boulevard,Isfahan Province, Shahin Shahr",
+                                  style: TextStyle(
+                                      color: Iron_Gray,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: RichText(
+                            text: const TextSpan(
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: "Phone:",
+                                  style: TextStyle(
+                                      color: Dark_Gray,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 18),
+                                ),
+                                TextSpan(
+                                  text:
+                                  "\t+989132064434\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t+989351057876",
+                                  style: TextStyle(
+                                      color: Iron_Gray,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: RichText(
+                            text: const TextSpan(
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: "Website:",
+                                  style: TextStyle(
+                                      color: Dark_Gray,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 18),
+                                ),
+                                TextSpan(
+                                  text: "\twww.shahram-ghorbani.ir",
+                                  style: TextStyle(
+                                      color: Iron_Gray,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: RichText(
+                            text: const TextSpan(
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: "Email:",
+                                  style: TextStyle(
+                                      color: Dark_Gray,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 18),
+                                ),
+                                TextSpan(
+                                  text: "\tshahram.gh.1988@gmail.com",
+                                  style: TextStyle(
+                                      color: Iron_Gray,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: RichText(
+                            text: const TextSpan(
+                              children: <TextSpan>[
+                                TextSpan(
+                                  text: "Whatsaap:",
+                                  style: TextStyle(
+                                      color: Dark_Gray,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 18),
+                                ),
+                                TextSpan(
+                                  text:
+                                  "\t+989132064434\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t+989351057876",
+                                  style: TextStyle(
+                                      color: Iron_Gray,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 14),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  ListTile(
-                    titleAlignment: ListTileTitleAlignment.top,
-                    leading: Icon(CupertinoIcons.phone),
-                    title: Text(
-                      "\t+989132064434\n\t+989351057876",
-                      style: TextStyle(
-                          color: Iron_Gray,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14),
-                    ),
-                  ),
-                  ListTile(
-                    titleAlignment: ListTileTitleAlignment.top,
-                    leading: Icon(CupertinoIcons.globe),
-                    title: Text(
-                      "\twww.shahram-ghorbani.ir",
-                      style: TextStyle(
-                          color: Iron_Gray,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14),
-                    ),
-                  ),
-                  ListTile(
-                    titleAlignment: ListTileTitleAlignment.top,
-                    leading: Icon(CupertinoIcons.at),
-                    title: Text(
-                      "\tshahram.gh.1988@gmail.com",
-                      style: TextStyle(
-                          color: Iron_Gray,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],
