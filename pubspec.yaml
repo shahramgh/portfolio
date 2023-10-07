@@ -1,0 +1,425 @@
+name: portfolio_website
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.3 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  get: ^4.6.6
+  responsive_builder: ^0.7.0
+  url_launcher: ^6.1.14
+  dotted_line: ^3.2.2
+  percent_indicator: ^4.2.3
+  universal_html: ^2.2.1
+  animated_text_kit: ^4.2.2
+  ionicons: ^0.2.2
+  material_design_icons_flutter: ^7.0.7296
+  line_icons: ^2.0.3
+  eva_icons_flutter: ^3.1.0
+  latlong2: ^0.9.0
+  location: ^5.0.0
+  google_maps_flutter: ^2.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+dependency_overrides:
+  flutter_map:
+    git:
+      url: https://github.com/fleaflet/flutter_map.git
+      # ref: main (custom branch/commit)
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/avatar/
+    - assets/images/social_media/
+    - assets/images/main_image/
+    - assets/fonts/
+    - assets/
+    - assets/fonts/
+    - assets/images/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+     - family: SFProText
+       fonts:
+         - asset: assets/fonts/SFProText-Bold.ttf
+     - family: DancingScript
+       fonts:
+         - asset: assets/fonts/DancingScript-VariableFont_wght.ttf
+     - family: Fuggles
+       fonts:
+         - asset: assets/fonts/Fuggles-Regular.ttf
+     - family: TitilliumWeb
+       fonts:
+         - asset: assets/fonts/TitilliumWeb-Black.ttf
+     - family: DelaGothicOne
+       fonts:
+         - asset: assets/fonts/DelaGothicOne-Regular.ttf
+     - family: Caveat
+       fonts:
+         - asset: assets/fonts/Caveat-VariableFont_wght.ttf
+     - family: GreatVibes
+       fonts:
+         - asset: assets/fonts/GreatVibes-Regular.ttf
+     - family: Gruppo
+       fonts:
+         - asset: assets/fonts/Gruppo-Regular.ttf
+     - family: LexendDeca
+       fonts:
+         - asset: assets/fonts/LexendDeca-VariableFont_wght.ttf
+     - family: SocialMediaIcons
+       fonts:
+         - asset: assets/fonts/SocialMediaIcons.ttf
+     - family: Dome
+       fonts:
+         - asset: assets/fonts/Dome.ttf
+     - family: DomeLight
+       fonts:
+         - asset: assets/fonts/Dome_Light.ttf
+     - family: SFProText
+       fonts:
+         - asset: assets/fonts/SFProText-Bold.ttf
+     - family: DancingScript
+       fonts:
+         - asset: assets/fonts/DancingScript-VariableFont_wght.ttf
+     - family: Fuggles
+       fonts:
+         - asset: assets/fonts/Fuggles-Regular.ttf
+     - family: TitilliumWeb
+       fonts:
+         - asset: assets/fonts/TitilliumWeb-Black.ttf
+     - family: DelaGothicOne
+       fonts:
+         - asset: assets/fonts/DelaGothicOne-Regular.ttf
+     - family: Caveat
+       fonts:
+         - asset: assets/fonts/Caveat-VariableFont_wght.ttf
+     - family: GreatVibes
+       fonts:
+         - asset: assets/fonts/GreatVibes-Regular.ttf
+     - family: Gruppo
+       fonts:
+         - asset: assets/fonts/Gruppo-Regular.ttf
+     - family: LexendDeca
+       fonts:
+         - asset: assets/fonts/LexendDeca-VariableFont_wght.ttf
+     - family: abh1
+       fonts:
+         - asset: assets/fonts/abh1.ttf
+     - family: AlaskanNights
+       fonts:
+         - asset: assets/fonts/AlaskanNights.ttf
+     - family: alba
+       fonts:
+         - asset: assets/fonts/alba.ttf
+     - family: albam
+       fonts:
+         - asset: assets/fonts/albam.ttf
+     - family: albas
+       fonts:
+         - asset: assets/fonts/albas.ttf
+     - family: Anywhere
+       fonts:
+         - asset: assets/fonts/Anywhere.ttf
+     - family: AVP
+       fonts:
+         - asset: assets/fonts/AVP.ttf
+     - family: bands_artists
+       fonts:
+         - asset: assets/fonts/bands_artists.ttf
+     - family: Base02
+       fonts:
+         - asset: assets/fonts/Base02.ttf
+     - family: bjorkfont
+       fonts:
+         - asset: assets/fonts/bjorkfont.ttf
+     - family: Blazed
+       fonts:
+         - asset: assets/fonts/Blazed.ttf
+     - family: breakaway
+       fonts:
+         - asset: assets/fonts/breakaway.ttf
+     - family: brooklyn
+       fonts:
+         - asset: assets/fonts/brooklyn.ttf
+     - family: CableDingbats
+       fonts:
+         - asset: assets/fonts/CableDingbats.ttf
+     - family: cocacola
+       fonts:
+         - asset: assets/fonts/cocacola.ttf
+     - family: coldcoffee_2005
+       fonts:
+         - asset: assets/fonts/coldcoffee_2005.ttf
+     - family: defused
+       fonts:
+         - asset: assets/fonts/defused.ttf
+     - family: DESIB
+       fonts:
+         - asset:  assets/fonts/DESIB.ttf
+     - family: distortia
+       fonts:
+         - asset: assets/fonts/distortia.ttf
+     - family: dpquake
+       fonts:
+         - asset: assets/fonts/dpquake.ttf
+     - family: Elektra
+       fonts:
+         - asset: assets/fonts/Elektra.ttf
+     - family: eraser
+       fonts:
+         - asset: assets/fonts/eraser.ttf
+     - family: evanescent
+       fonts:
+         - asset: assets/fonts/evanescent.ttf
+     - family: evanescent_p
+       fonts:
+         - asset: assets/fonts/evanescent_p.ttf
+     - family: Facelift
+       fonts:
+         - asset: assets/fonts/Facelift.ttf
+     - family: FerroRosso
+       fonts:
+         - asset: assets/fonts/FerroRosso.ttf
+     - family: fightclub
+       fonts:
+         - asset: assets/fonts/fightclub.ttf
+     - family: Freshman
+       fonts:
+         - asset: assets/fonts/Freshman.ttf
+     - family: Friday13SH
+       fonts:
+         - asset: assets/fonts/Friday13SH.ttf
+     - family: Friday13v12
+       fonts:
+         - asset: assets/fonts/Friday13v12.ttf
+     - family: GameLogos
+       fonts:
+         - asset: assets/fonts/GameLogos.ttf
+     - family: GOODTIME
+       fonts:
+         - asset: assets/fonts/GOODTIME.ttf
+     - family: gremlins
+       fonts:
+         - asset: assets/fonts/gremlins.ttf
+     - family: Halo
+       fonts:
+         - asset: assets/fonts/Halo.ttf
+     - family: Hitman
+       fonts:
+         - asset: assets/fonts/Hitman.ttf
+     - family: If
+       fonts:
+         - asset: assets/fonts/If.ttf
+     - family: illustrate
+       fonts:
+         - asset: assets/fonts/illustrate-it.ttf
+     - family: Independence
+       fonts:
+         - asset: assets/fonts/Independence.ttf
+     - family: jaguarb
+       fonts:
+         - asset:  assets/fonts/jaguarb.ttf
+     - family: jaguarw
+       fonts:
+         - asset:  assets/fonts/jaguarw.ttf
+     - family: jaguarwi
+       fonts:
+         - asset:  assets/fonts/jaguarwi.ttf
+     - family: JAMIROQUAI_pl
+       fonts:
+         - asset: assets/fonts/JAMIROQUAI_pl.ttf
+     - family: JerseyLetters
+       fonts:
+         - asset: assets/fonts/JerseyLetters.ttf
+     - family: Knigqst
+       fonts:
+         - asset: assets/fonts/Knigqst.ttf
+     - family: kremlin
+       fonts:
+         - asset: assets/fonts/kremlin.ttf
+     - family: linkin
+       fonts:
+         - asset: assets/fonts/linkin.ttf
+     - family: LinkinPark
+       fonts:
+         - asset: assets/fonts/LinkinPark.ttf
+     - family: Lynx
+       fonts:
+         - asset: assets/fonts/Lynx.ttf
+     - family: marlbo
+       fonts:
+         - asset: assets/fonts/marlbo.ttf
+     - family: matrix
+       fonts:
+         - asset: assets/fonts/matrix.ttf
+     - family: Megadeth
+       fonts:
+         - asset: assets/fonts/Megadeth.ttf
+     - family: namco
+       fonts:
+         - asset: assets/fonts/namco.ttf
+     - family: NarniaBLL
+       fonts:
+         - asset: assets/fonts/NarniaBLL.ttf
+     - family: nasaliza
+       fonts:
+         - asset: assets/fonts/nasaliza.ttf
+     - family: oasis
+       fonts:
+         - asset: assets/fonts/oasis.ttf
+     - family: OctemberScript
+       fonts:
+         - asset: assets/fonts/OctemberScript.ttf
+     - family: pepsi
+       fonts:
+         - asset: assets/fonts/pepsi.ttf
+     - family: playstation
+       fonts:
+         - asset: assets/fonts/playstation.ttf
+     - family: playstation2
+       fonts:
+         - asset: assets/fonts/playstation2.ttf
+     - family: Playtoy
+       fonts:
+         - asset: assets/fonts/Playtoy.ttf
+     - family: pricedow
+       fonts:
+         - asset: assets/fonts/pricedow.ttf
+     - family: Rabid_Science
+       fonts:
+         - asset: assets/fonts/Rabid_Science.ttf
+     - family: RecycleIt
+       fonts:
+         - asset: assets/fonts/RecycleIt.ttf
+     - family: Riven
+       fonts:
+         - asset: assets/fonts/Riven.ttf
+     - family: sega
+       fonts:
+         - asset: assets/fonts/sega.ttf
+     - family: SimsLLHP
+       fonts:
+         - asset: assets/fonts/SimsLLHP.ttf
+     - family: SKYfontThick
+       fonts:
+         - asset: assets/fonts/SKYfontThick.ttf
+     - family: trancefm
+       fonts:
+         - asset: assets/fonts/trancefm.ttf
+     - family: UnrealT
+       fonts:
+         - asset: assets/fonts/UnrealT.ttf
+     - family: usuziv2
+       fonts:
+         - asset: assets/fonts/usuziv2.ttf
+     - family: usuzv2i
+       fonts:
+         - asset: assets/fonts/usuzv2i.ttf
+     - family: warlock
+       fonts:
+         - asset: assets/fonts/warlock.ttf
+     - family: wds011402
+       fonts:
+         - asset: assets/fonts/wds011402.ttf
+     - family: WildRide
+       fonts:
+         - asset: assets/fonts/WildRide.ttf
+     - family: WildRideBackfill
+       fonts:
+         - asset: assets/fonts/WildRideBackfill.ttf
+     - family: winob
+       fonts:
+         - asset: assets/fonts/winob.ttf
+     - family: files
+       fonts:
+         - asset: assets/fonts/x-files.ttf
+     - family: xbox
+       fonts:
+         - asset: assets/fonts/xbox.ttf
+     - family: Xfiles
+       fonts:
+         - asset: assets/fonts/Xfiles.ttf
+     - family: Yahoo
+       fonts:
+         - asset: assets/fonts/Yahoo.ttf
+     - family: zxspectr
+       fonts:
+         - asset: assets/fonts/zxspectr.ttf
